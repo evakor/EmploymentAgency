@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+        <title>Sign Up</title>
+</head>
+
+<body>
+
+    <main>
+        <%- include('../partials/header'); %>
+            <div>
+                <h1>Sign Up</h1>
+                <form method="post">
+                    <legend>Στοιχεία φοιτητή</legend>
+                    <p>Συμπληρώστε τα στοιχεία σας με ελληνικούς χαρακτήρες</p>
+                    <label>Ονοματεπώνυμο<br>
+                        <input name="name" type="text" placeholder="Όνομα" />
+                        <input name="surname" type="text" placeholder="Επώνυμο" />
+                    </label>
+                    <br>
+                    <br>
+                    <label>Στοιχεία διεύθυνσης<br>
+                        <input name="address" type="text" placeholder="Οδός και αριθμός" style="width: 430px" />
+                        <br>
+                        <input name="town" type="text" placeholder="Πόλη" />
+                        <input name="zipcode" type="text" placeholder="Ταχυδρομικός κώδικας" />
+                    </label>
+                    <br>
+                    <br>
+                    <label>Στοιχεία επικοινωνίας<br>
+                        <input name="phone" type="number" placeholder="Τηλέφωνο" />
+                        <input name="email" type="email" placeholder="Διεύθυνση μέιλ" />
+                    </label>
+                    <br>
+                    <br>
+                    <label class="radio-group">Έτος σπουδών
+                        <input type="radio" id="radioA" name="year_option" value="A">
+                        <label for="radioA">Α</label>
+
+                        <input type="radio" id="radioB" name="year_option" value="B">
+                        <label for="radioB">Β</label>
+
+                        <input type="radio" id="radioC" name="year_option" value="C">
+                        <label for="radioC">Γ</label>
+
+                        <input type="radio" id="radioD" name="year_option" value="D">
+                        <label for="radioD">Δ</label>
+
+                        <input type="radio" id="radioE" name="year_option" value="E">
+                        <label for="radioE">Ε</label>
+                    </label>
+                    <br>
+                    <br>
+                    <label>Αριθμός μητρόου<br>
+                        <input name="id" type="number" placeholder="1050505" />
+                    </label>
+
+                    <br>
+                    <button class="simple-button" type="submit" value="Υποβολή" />Υποβολή</button>
+                </form>
+            </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

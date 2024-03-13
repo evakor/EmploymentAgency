@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <%- include('../partials/head'); %>
+  <%- include('../partials/head'); %>
     <title>Home</title>
 </head>
 
@@ -10,9 +10,40 @@
 
   <main>
     <%- include('../partials/header'); %>
-    <div>
-      <h1>Iaso kokla</h1>
-    </div>
+      <div class="container">
+        <div class="home-bg">
+          <img src="static/home_background.png" alt="Snow" class="home-bg">
+        </div>
+        <div class="home-bg-text">Find your dream job!</div>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <img src="static/job_default_logo.jpg" alt="Description" class="card-image">
+          <div class="card-content">
+            <h2 class="card-title">Card 1</h2>
+            <hr>
+            <p class="card-description">This is a description for Card 1.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="static/job_default_logo.jpg" alt="Description" class="card-image">
+          <div class="card-content">
+            <h2 class="card-title">Card 2</h2>
+            <hr>
+            <p class="card-description">This is a description for Card 2.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="static/job_default_logo.jpg" alt="Description" class="card-image">
+          <div class="card-content">
+            <h2 class="card-title">Card 3</h2>
+            <hr>
+            <p class="card-description">This is a description for Card 3.</p>
+          </div>
+        </div>
+      </div>
   </main>
 
   <footer>

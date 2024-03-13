@@ -27,6 +27,10 @@ app.get('/about', (req, res) => {
   res.render('pages/about');
 });
 
+app.get('/signup', (req, res) => {
+  res.render('pages/signup');
+});
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });

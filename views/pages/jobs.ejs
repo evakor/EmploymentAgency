@@ -2,17 +2,57 @@
 <html lang="en">
 
 <head>
-    <%- include('../partials/head'); %>
-    <title>Jobs</title>
+  <%- include('../partials/head'); %>
+    <title>Home</title>
 </head>
 
 <body>
 
   <main>
     <%- include('../partials/header'); %>
-    <div>
-      <h1>Edo vriskeis eukairies</h1>
-    </div>
+      <div class="filters">
+        <select type="selection">
+          <option value="CardScreenshot">Τίτλος Εργασίας</option>
+          <option value="op2">op2</option>
+          <option value="op3">op3</option>
+        </select>
+
+        <select type="selection">
+          <option value="CardScreenshot">Περιοχή Εργασίας</option>
+          <option value="op2">op2</option>
+          <option value="op3">op3</option>
+        </select>
+
+        <button class="simple-button" type="submit" value="Υποβολή" />Εφαρμογή</button>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <img src="static/job_default_logo.jpg" alt="Description" class="card-image">
+          <div class="card-content">
+            <h2 class="card-title">Card 1</h2>
+            <hr>
+            <p class="card-description">This is a description for Card 1.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="static/job_default_logo.jpg" alt="Description" class="card-image">
+          <div class="card-content">
+            <h2 class="card-title">Card 2</h2>
+            <hr>
+            <p class="card-description">This is a description for Card 2.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="static/job_default_logo.jpg" alt="Description" class="card-image">
+          <div class="card-content">
+            <h2 class="card-title">Card 3</h2>
+            <hr>
+            <p class="card-description">This is a description for Card 3.</p>
+          </div>
+        </div>
+      </div>
   </main>
 
   <footer>
