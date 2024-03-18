@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+        <title>Employer Info</title>
+</head>
+
+<body>
+
+    <main>
+        <%- include('../partials/header'); %>
+        <div class="container">
+            <fieldset>
+                <label>Ονοματεπώνυμο<br>
+                    <input type="text" id="firstname" name="onoma" placeholder="First Name" readonly>
+                    <input type="text" id="lastname" name="eponimo" placeholder="Last Name" readonly>
+                </label>
+        
+                <label>Στοιχεία επικοινωνίας<br>
+                    <input type="email" id="mail" name="user_mail" placeholder="Email" readonly>
+                    <input type="tel" id="phone1" name="user_phone1" placeholder="Phone 1" readonly>
+                    <input type="tel" id="phone2" name="user_phone2" placeholder="Phone 2" readonly>
+                </label>
+        
+                <label>Στοιχεία Διεύθυνσης<br>
+                    <input type="text" id="textbox3" name="diefthinsi" placeholder="Address" readonly>
+                    <input type="text" id="region" name="perioxh" placeholder="Region" readonly>
+        
+                </label>
+                <button class="card-button" id="tropopoihsh" value="edit">Τροποποίηση</button>
+                <button class="card-button" id="nea_aggelia" value="insert_value">Νέα Αγγελία</button>
+                <img src="static/job_default_logo.jpg" alt="User Image" class="user_image">
+        
+                </form>
+            </fieldset>
+        
+            <fieldset>
+                
+                <div class="cards">
+                    <div class="card">
+                        <img src="static/job_default_logo.jpg" alt="Description" class="card-image">
+                        <div class="card-content">
+                            <h2 class="card-title">Αγγελία 1</h2>
+                            <hr>
+                            <p class="card-description">This is a description for Card 1.</p>
+                        </div>
+                        <button class="card-button" value="delete">Delete</button>
+                    </div>
+        
+                    <div class="card">
+                        <img src="static/job_default_logo.jpg" alt="Description" class="card-image">
+                        <div class="card-content">
+                            <h2 class="card-title">Αγγελία 2</h2>
+                            <hr>
+                            <p class="card-description">This is a description for Card 1.1</p>
+                        </div>
+                        <button class="card-button" value="delete">Delete</button>
+                    </div>
+            </fieldset>
+        </div>
+       
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

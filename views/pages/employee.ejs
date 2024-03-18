@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+        <title>Personal Info</title>    
+</head>
+
+<body>
+    <main>
+        <%- include('../partials/header'); %>
+        <div class="container">
+                <fieldset>
+                    <label>Ονοματεπώνυμο<br>
+                        <input type="text" id="user_input" name="onoma" placeholder="First Name" readonly>
+                        <input type="text" id="user_input" name="eponimo" placeholder="Last Name" readonly>
+                    </label>
+
+                    <label>Στοιχεία επικοινωνίας<br>
+                        <input type="email" id="user_input" name="user_mail" placeholder="Email" readonly>
+                        <input type="tel" id="user_input" name="user_phone1" placeholder="Phone 1" readonly>
+                        <input type="tel" id="user_input" name="user_phone2" placeholder="Phone 2" readonly>
+                    </label>
+
+                    <label>Στοιχεία Διεύθυνσης<br>
+                        <input type="text" id="user_input" name="diefthinsi" placeholder="Address" readonly>
+                        <input type="text" id="user_input" name="perioxh" placeholder="Region" readonly>
+                        
+                    </label>
+                    <br>
+                    <label>Category:<br>
+                        <select name="kathgoria_eidikotitas">
+                            <option value="estiash">Hospitality-Food-Beverage</option>
+                            <option value="pelates">Office Support-Customer Service-Accounting</option>
+                            <option value="emporio">Commerce & Promotion</option>
+                            <option value="texnites">Craftsmen - Workers</option>
+                            <option value="omorfia">Beauty & Care</option>
+                            <option value="oikiakes_ergasies">Household Works</option>
+                            <option value="tourismos">Tourism</option>
+                            <option value="ekpaidefsi">Lessons - Education</option>
+                            <option value="naftiliaka">Shipping</option>
+                            <option value="texnologia">IT Technology</option>
+                        </select>
+
+                        <select name="ypokathgoria_eidikotitas">
+                            <option value="estiash">Chef</option>
+                            <option value="pelates">Receptionist</option>
+                            <option value="emporio">Salesperson</option>
+                            <option value="texnites">Electrician</option>
+                            <option value="omorfia">Hairdresser</option>
+                            <option value="oikiakes_ergasies">Housekeeper</option>
+                            <option value="tourismos">Tour Guide</option>
+                            <option value="ekpaidefsi">Teacher</option>
+                            <option value="naftiliaka">Sailor</option>
+                            <option value="texnologia">Software Developer</option>
+                        </select>
+                    </label>
+
+                    <img src="static/user_profile.jpeg" alt="User Image" class="user_image">
+
+                    <form action="upload_image.php" method="post" enctype="multipart/form-data" >
+                        <button class="card-button" id="uploadImageButton">Upload Image</button>
+                    </form>
+
+                    <form action="upload_cv.php" method="post" enctype="multipart/form-data" >
+                        <button class="card-button" id="uploadCVButton">Upload CV</button>
+                    </form>
+
+                    <button class="card-button" id="edit_info">Edit</button>
+                </fieldset>
+                
+                <fieldset>
+                    <h2 id="header_title">Οι Αγγελίες Μου</h2>
+                    <div class="cards">
+                        <div class="card">
+                            <img src="static/job_default_logo.jpg" alt="Description" class="card-image">
+                            <div class="card-content">
+                                <h2 class="card-title">Αγγελία 1</h2>
+                                <hr>
+                                <p class="card-description">This is a description for Card 1.</p>
+                            </div>
+                            <button class="card-button" value="delete">Delete</button>
+                        </div>
+
+                        <div class="card">
+                            <img src="static/job_default_logo.jpg" alt="Description" class="card-image">
+                            <div class="card-content">
+                                <h2 class="card-title">Αγγελία 2</h2>
+                                <hr>
+                                <p class="card-description">This is a description for Card 1.1</p>
+                            </div>
+                            <button class="card-button" value="delete">Delete</button>
+                        </div>
+                </fieldset>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+</html>
