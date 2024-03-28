@@ -13,10 +13,10 @@ app.get('/', (req, res) => {
 });
 
 app.get('/employee', (req, res) => {
-    res.render('pages/employee');
+    res.render('pages/employeeProfile');
 });
 app.get('/employer', (req, res) => {
-  res.render('pages/employer');
+  res.render('pages/employerProfile');
 });
 
 app.get('/jobs', (req, res) => {

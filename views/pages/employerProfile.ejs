@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+        <title>Personal Info</title>
+</head>
+
+<body>
+    <main>
+        <%- include('../partials/header'); %>
+            <div class="profile_container">
+                <div class="profile">
+                    <img src="static/job_default_logo.jpg" alt="Description" class="profile_image">
+                    <div class="profile_info">
+                        <p>Firstname: {firstname}</p>
+                        <p>Lastname: {lastname}</p>
+                        <p>Company Name: {comp_name}</p>
+                        <p>Email: {email}</p>
+                        <p>Phone1: {phone1}</p>
+                        <p>Phone2: {phone2}</p>
+                        <p>Address: {address}</p>
+                        <p>Region: {region}</p>
+                        <p>Company Description: {comp_desc}</p>
+                    </div>
+                    <div class="profile_buttons">
+                        <button class="profile-button" type="submit" value="upload_image" />Upload Image</button>
+                        <button class="profile-button" type="submit" value="add_job" />Add job</button>
+                        <button class="profile-button" type="submit" value="Edit" />Edit</button>
+                    </div>
+                </div>
+
+                <h2>Οι αγγελίες μου</h2>
+
+                <div class="cards">
+                    <div class="card">
+                        <img src="static/job_default_logo.jpg" alt="Description" class="card-image">
+                        <div class="card-content">
+                            <h2 class="card-title">Card 1</h2>
+                            <hr>
+                            <p class="card-description">This is a description for Card 1.This is a description for Card
+                                1.This is a description for Card 1.This is a description for Card 1.This is a
+                                description for Card 1</p>
+                        </div>
+                        <div class="profile_buttons">
+                            <button class="profile-button" type="submit" value="edit" />Edit</button>
+                            <button class="profile-button" type="submit" value="delete" />Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="static/job_default_logo.jpg" alt="Description" class="card-image">
+                        <div class="card-content">
+                            <h2 class="card-title">Card 2</h2>
+                            <hr>
+                            <p class="card-description">This is a description for Card 2.</p>
+                        </div>
+                        <div class="profile_buttons">
+                            <button class="profile-button" type="submit" value="edit" />Edit</button>
+                            <button class="profile-button" type="submit" value="delete" />Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="static/job_default_logo.jpg" alt="Description" class="card-image">
+                        <div class="card-content">
+                            <h2 class="card-title">Card 3</h2>
+                            <hr>
+                            <p class="card-description">This is a description for Card 3.</p>
+                        </div>
+                        <div class="profile_buttons">
+                            <button class="profile-button" type="submit" value="edit" />Edit</button>
+                            <button class="profile-button" type="submit" value="delete" />Delete</button>
+                        </div>
+                    </div>
+                </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

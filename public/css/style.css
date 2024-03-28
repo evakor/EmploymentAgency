@@ -47,31 +47,45 @@ html {
 	font-size: 25px;
 	margin: 0;
 	margin-left: 10px;
-	text-align: left;
+	text-align: center;
 	line-height: 60px;
 }
 
 .navbar a {
-	padding: 8px 8px 8px 32px;
+	/* top right bottom left */
+	padding: 8px 8px 8px 8px;
+	text-align: center;
 	text-decoration: none;
-	font-size: 25px;
+	font-size: 20px;
 	color: #818181;
 	display: block;
 	transition: 0.3s;
 }
 
+.navbar-bottom {
+    display: flex;
+    justify-content: block;
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+	margin-left: 60px;
+}
+
 .navbar .closebtn {
 	position: absolute;
 	top: 0;
-	right: 25px;
+	right: 5px;
 	font-size: 36px;
 }
+
+
+
 
 .container {
 	position: relative;
 	text-align: center;
 	color: white;
-	
+
 }
 
 .home-bg {
@@ -85,7 +99,7 @@ html {
 .home-bg img {
 	width: 100%;
 	height: 100%;
-  }
+}
 
 .home-bg-text {
 	font-size: 30px;
@@ -96,40 +110,41 @@ html {
 }
 
 .cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	margin: 50px;
 }
 
 .card {
-	width: 100%;
-    display: flex;
+	width: 70%;
+	display: flex;
 	align-items: center;
-    background-color: #f0f0f0;
-    margin: 20px;
-    padding: 0;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: translate(0, -20px);
+	background-color: #f0f0f0;
+	margin: 20px;
+	padding: 0;
+	padding-right: 8px;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transform: translate(0, -20px);
 }
 
 .card-image {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-right: 20px;
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 5px;
+	margin-right: 20px;
 }
 
 .card-content {
-    flex: 1;
+	flex: 1;
 }
 
 .card-title {
-    margin-top: 0;
-    margin-bottom: 10px;
+	margin-top: 0;
+	margin-bottom: 10px;
 }
 
 .card hr {
@@ -137,15 +152,15 @@ html {
 }
 
 .card-description {
-    margin-top: 10px;
+	margin-top: 10px;
 	margin-right: 130px;
 }
 
 .filters {
 	display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
 	margin-top: 20px;
 }
 
@@ -182,6 +197,17 @@ select {
 	height: 50px;
 }
 
+.profile-button {
+	background-color: #000000;
+	color: #ffffff;
+	border-radius: 8px;
+	padding: 5px 10px;
+	text-align: center;
+	width: 120px;
+	height: 40px;
+	margin: 0;
+}
+
 .card-button {
 	background-color: #000000;
 	color: #ffffff;
@@ -208,104 +234,152 @@ footer {
 /* For the profiles pages */
 
 label {
-    display: flex;
-    margin-bottom: 10px;
+	display: flex;
+	margin-bottom: 10px;
 	margin-left: 250px;
 	padding-right: 10px;
-    font-weight: bold;
-    flex-wrap: wrap;
+	font-weight: bold;
+	flex-wrap: wrap;
 }
 
-#user_input, select {
+#user_input,
+select {
 	margin-left: 20px;
-    width: 20%; 
-    padding: 10px;
-    margin-bottom: 10px; 
+	width: 20%;
+	padding: 10px;
+	margin-bottom: 10px;
 }
 
 fieldset {
-    border: none;
-    padding: 0;
+	border: none;
+	padding: 0;
 	margin-top: 20px;
-    margin-bottom: 20px;
-    position: relative; 
+	margin-bottom: 20px;
+	position: relative;
 }
 
 .user_image {
-	position: absolute; 
-    left: 10px;
-    top: 10px;
-    width: 200px; 
-    height: auto;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 200px;
+	height: auto;
 }
 
-.upload-form{
-	position: absolute; 
-    right: 10px;
-    top: 10px;
-    width: 200px; 
-    height: auto;
+.upload-form {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 200px;
+	height: auto;
 }
 
-#uploadImageButton{
+#uploadImageButton {
 	position: absolute;
 	right: 0px;
-    top: 20px; 
-    margin: 10px;
+	top: 20px;
+	margin: 10px;
 }
- 
-#uploadImageButton:hover{
+
+#uploadImageButton:hover {
 	background-color: #a0a0a0;
 }
 
-#uploadCVButton{
+#uploadCVButton {
 	position: absolute;
 	right: 0px;
-    top: 80px; 
-    margin: 10px;
+	top: 80px;
+	margin: 10px;
 }
 
-#uploadCVButton:hover{
+#uploadCVButton:hover {
 	background-color: #a0a0a0;
 }
 
-#edit_info{
+#edit_info {
 	position: absolute;
 	right: 0px;
-    top: 140px; 
-    margin: 10px;
+	top: 140px;
+	margin: 10px;
 }
 
-#edit_info:hover{
+#edit_info:hover {
 	background-color: #a0a0a0;
 }
 
-#tropopoihsh{
+#tropopoihsh {
 	position: absolute;
 	right: 0px;
-    top: 20px; 
-    margin: 10px;
+	top: 20px;
+	margin: 10px;
 }
 
-#tropopoihsh:hover{
+#tropopoihsh:hover {
 	background-color: #a0a0a0;
 }
 
-#nea_aggelia{
+#nea_aggelia {
 	position: absolute;
 	right: 0px;
 	bottom: 0px;
-    margin: 10px;
+	margin: 10px;
 }
 
-#nea_aggelia:hover{
+#nea_aggelia:hover {
 	background-color: #a0a0a0;
 }
 
-#header_title{
-    margin-bottom: 10px;
+#header_title {
+	margin-bottom: 10px;
 	margin-left: 100px;
-    font-weight: bold;
+	font-weight: bold;
 }
 
+.profile_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 50px;
+}
 
+.profile {
+	width: 70%;
+	display: flex;
+	align-items: center;
+	background-color: #f0f0f0;
+	margin: 20px;
+	padding: 8px;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transform: translate(0, -20px);
+}
+
+.profile_image {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 5px;
+	margin-right: 20px;
+}
+
+.profile_info {
+	flex: 1;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 0px;
+	row-gap: 5px;
+	margin-left: 5px;
+	align-self: stretch;
+}
+
+.profile_info p {
+	margin: 0;
+	padding: 5px;
+}
+
+.profile_buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
