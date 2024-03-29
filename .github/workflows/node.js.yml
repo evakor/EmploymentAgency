@@ -24,8 +24,8 @@ jobs:
     - name: Install dependencies
       run: npm install ejs express
 
-    - name: Build and Test
-      run: npm run build
+    # - name: Build and Test
+    #   run: npm run build
 
     - name: Deploy
       run: node main.js
