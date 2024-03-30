@@ -1,29 +1,36 @@
-name: Build and Deploy
+name: Employment Agency
+
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
-  build:
+  setup-and-run:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: ['20.12.0']
+
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
       with:
-        node-version: '20.12.0'
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
 
-    - name: Install Dependencies
-      run: npm install ejs express
+    - name: Install dependencies
+      run: npm ci
 
-    - name: Build Project
-      run: npm run main.js
+    - name: Build the project (if applicable)
+      run: npm run build --if-present
+      
+    #- name: Run tests
+    #  run: npm test
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./public
+    - name: Start the application
+      run: npm start
