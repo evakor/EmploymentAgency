@@ -20,7 +20,7 @@ jobs:
       run: npm install ejs express
 
     - name: Build Project
-      run: npm run main
+      run: npm run main.js
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
