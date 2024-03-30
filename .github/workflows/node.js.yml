@@ -1,31 +1,36 @@
-name: Node.js Site CI
+name: Employment Agency
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
   pull_request:
-    branches:
-      - main
+    branches: [ "main" ]
 
 jobs:
-  build:
+  setup-and-run:
     runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+    strategy:
+      matrix:
+        node-version: ['20.12.0']
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
       with:
-        node-version: '14'
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
 
     - name: Install dependencies
-      run: npm install ejs express
+      run: npm ci
 
-    # - name: Build and Test
-    #   run: npm run build
+    - name: Build the project (if applicable)
+      run: npm run build --if-present
+      
+    #- name: Run tests
+    #  run: npm test
 
-    - name: Deploy
-      run: node main.js
+    - name: Start the application
+      run: npm start
