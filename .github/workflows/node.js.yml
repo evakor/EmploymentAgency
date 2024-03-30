@@ -1,10 +1,6 @@
-name: Node.js Site CI
-
+name: Build and Deploy
 on:
   push:
-    branches:
-      - main
-  pull_request:
     branches:
       - main
 
@@ -13,19 +9,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v1
       with:
-        node-version: '14'
+        node-version: '20.12.0'
 
-    - name: Install dependencies
+    - name: Install Dependencies
       run: npm install ejs express
 
-    # - name: Build and Test
-    #   run: npm run build
+    - name: Build Project
+      run: npm run main
 
-    - name: Deploy
-      run: node main.js
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
