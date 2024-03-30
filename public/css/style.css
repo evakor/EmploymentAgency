@@ -250,13 +250,13 @@ select {
 	margin-bottom: 10px;
 }
 
-fieldset {
+/* fieldset {
 	border: none;
 	padding: 0;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	position: relative;
-}
+} */
 
 .user_image {
 	position: absolute;
@@ -349,7 +349,7 @@ fieldset {
 	align-items: center;
 	background-color: #f0f0f0;
 	margin: 20px;
-	padding: 8px;
+	padding: 8px 30px;
 	border-radius: 5px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	transform: translate(0, -20px);
@@ -360,7 +360,7 @@ fieldset {
 	height: 150px;
 	object-fit: cover;
 	border-radius: 5px;
-	margin-right: 20px;
+	margin-right: 15px;
 }
 
 .profile_info {
@@ -373,13 +373,24 @@ fieldset {
 	align-self: stretch;
 }
 
+.profile_info fieldset {
+	border: 1px solid #6200ee;
+	color: #6200ee;
+	border-radius: 10px;
+	padding: 5px 5px;
+	font-size: 13px;
+}
+
 .profile_info p {
 	margin: 0;
-	padding: 5px;
+	padding: 1px;
+	color: #000000;
+	font-size: 19px;
 }
 
 .profile_buttons {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	margin-left: 15px;
 }
